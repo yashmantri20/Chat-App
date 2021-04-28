@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+.normal{
+  background-color: white;
+  transition: 1s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark{
+  background-color: black;
+  transition: 0.5s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: #2b2b2b;
+  height: 10vh;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-text{
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.chatbox {
+  padding: 10px;
+  height: 82vh;
+  margin: 10vh 0 0vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.chatbox::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.chatbox::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background: #4d4b4b;
+}
+
+form {
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  /* font-size: 1.5rem; */
+}
+
+form .send-btn {
+  width: 10%;
+  background-color: #2b2b2b;
+}
+
+.chat-input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 18px;
+  padding: 14px;
+  background: rgb(58, 58, 58) !important;
   color: white;
+  border: none;
+  outline: none;
+  border-radius: 0px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.send-btn {
+  background-color: #2b2b2b !important; /* Green */
+  border: none;
+  color: white;
+  padding: 30px 32px !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px !important;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-btn:disabled {
+  cursor: not-allowed;
+}
+
+.logout-btn {
+  color: #2b2b2b;
+  margin-left: 10px;
+  background-color: #cecece !important;
+  padding: 8px !important;
+}
+
+.message-text {
+  max-width: 500px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: start;
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.normal .sent p {
+  color: white;
+  background: #2b2b2b;
+  transition: 0.5s ease-out;
+}
+
+.dark .sent p {
+  color: black;
+  background: white;
+  transition: 0.5s ease-out;
+}
+
+.normal .received p {
+  color: white;
+  background: #4d4b4b;
+  transition: 0.5s ease-out;
+}
+
+.dark .received p {
+  color: black;
+  background: #e5e5ea;
+  transition: 0.5s ease-out;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
 }
