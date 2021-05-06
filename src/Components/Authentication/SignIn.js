@@ -12,8 +12,8 @@ const SignIn = ({
   return (
     <Box className='login'>
       <Box className='card'>
-        <Text className='login-header'>Notify</Text>
-        <Text className='login-desc'>Simple And Best Note Taking App</Text>
+        <Text className='login-header'>Chat App</Text>
+        <Text className='login-desc'>Simple And Best App</Text>
 
         <Box className='social-login'>
           <Button className='google-btn' onClick={signInWithGoogle}>
